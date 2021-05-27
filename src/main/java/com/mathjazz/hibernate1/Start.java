@@ -19,16 +19,17 @@ public class Start {
     public void init(){
 
         Score score1 = new Score("12:30", 25.5F);
-        Score  score2 = new Score("13:30", 24.0F);
-        Score  score3 = new Score("14:30", 23.0F);
-        Score  score4 = new Score("15:30", 23.0F);
+        Score score2 = new Score("13:30", 24.0F);
+        Score score3 = new Score("14:30", 23.0F);
+        Score score4 = new Score("15:30", 22.0F);
+        Score score5 = new Score("16:30", 20.0F);
 
 //        scoreRepo.save(score1);
 //        scoreRepo.save(score2);
 //        scoreRepo.save(score3);
 //        scoreRepo.deleteById(1L);
-        scoreRepo.save(score4);
-        scoreRepo.findAll().forEach(System.out::println);
+        scoreRepo.save(score5);
+        scoreRepo.findScoresByTemperatureIsBetween(21, 24).forEach(System.out::println);
 
     }
 }
